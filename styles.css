@@ -1,0 +1,123 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #6a11cb;
+}
+
+/* Part 1: CSS3 Transitions and Animations */
+
+/* Hover Transition Example */
+.hover-button {
+    padding: 10px 20px;
+    background-color: #6a11cb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hover-button:hover {
+    background-color: #2575fc;
+    transform: scale(1.1);
+}
+
+.hover-box {
+    width: 100px;
+    height: 100px;
+    background-color: #6a11cb;
+    margin: 20px auto;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hover-box:hover {
+    background-color: #2575fc;
+    transform: rotate(45deg);
+}
+
+/* CSS Animation Example */
+.animated-banner {
+    font-size: 24px;
+    margin: 20px 0;
+    animation: fadeIn 2s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #6a11cb;
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    margin: 20px auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Part 2: JavaScript Functions */
+.function-container {
+    margin: 40px 0;
+}
+
+.rectangle-area, .scope-demo, .toggle-animation {
+    margin: 20px 0;
+}
+
+input {
+    padding: 8px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #6a11cb;
+    margin: 20px auto;
+    transition: transform 0.5s ease;
+}
+
+.box.animated {
+    animation: bounce 1s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Part 3: Combining CSS Animations with JavaScript */
+.dynamic-box {
+    width: 100px;
+    height: 100px;
+    background-color: #6a11cb;
+    margin: 20px auto;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.dynamic-box.animated {
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-100%); }
+    to { opacity: 1; transform: translateX(0); }
+}
